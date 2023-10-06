@@ -20,4 +20,11 @@ alert(`${facebook * fbPay}`);
 let amazon = prompt("How many hours did you work at amazon?");
 alert(`${amazon * amzPay}`);
 
-console.log(facebook*hrsFb + google*hrsG + amazon*hrsAmz);
+
+let pPm = 3
+let lM = prompt("How many days did you rent the movie?")
+alert(`${lM * pPm}`)
+let bB = prompt("How many days did you rent the movie?")
+alert(`${bB * pPm}`)
+let h = prompt("How many days did you rent the movie?")
+alert(`${h * pPm}`)
