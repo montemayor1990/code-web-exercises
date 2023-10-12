@@ -8,7 +8,7 @@
 //  * Example
 //  * > sayHello("codeup") // returns "Hello, codeup!"
 //  */
-function sayHello(name) {
+const sayHello = (name) => {
     return `Hello, ${name}`
 };
 
@@ -25,8 +25,8 @@ console.log(sayHello("Codeup!"));
 //  */
 
 
-let myName = "David"
-let helloMessage = sayHello(myName)
+const myName = "David"
+const helloMessage = sayHello(myName)
 
 
 console.log(helloMessage)
@@ -81,9 +81,11 @@ const totalBill = 20
 //  *
 const calculateTip = (tip) => {
     return tip * tipPercentage
-}
+};
 
 console.log(calculateTip(totalBill))
+//**create two parameters like you first started
+
 //  * Examples:
 //  * > calculateTip(0.20, 20) // returns 4
 //  * > calculateTip(0.25, 25.50) // returns 6.375
@@ -99,8 +101,8 @@ console.log(calculateTip(totalBill))
 let userInput1 = prompt('What was the total Bill?');
 console.log(`The user entered: ${userInput1}`);
 let userInput2 = prompt('What percentage would you like to tip?');
-let tipAmount = userInput1 * userInput2
 console.log(`The user entered: ${userInput2}`);
+let tipAmount = userInput1 * userInput2
 alert(`This is the suggested tip ${tipAmount}`);
 
 
@@ -113,7 +115,7 @@ alert(`This is the suggested tip ${tipAmount}`);
 //  * and 1). It should return the result of applying the discount to the original
 //  * price.
 
- let originalPrice = 1000;
+ let originalPrice = 5000;
  let discountPercent = .2; // 20%
 
 const applyDiscount = (price, discount) => {
