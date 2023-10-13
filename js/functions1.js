@@ -85,7 +85,7 @@ console.log(firstChar("David"))
 const lastChar = (character) => {
     return character.charAt(6)
 }
-console.log(lastChar("DavidMontemayor")
+console.log(lastChar("DavidMontemayor"))
 
 
 // ## Is Palindrome?
