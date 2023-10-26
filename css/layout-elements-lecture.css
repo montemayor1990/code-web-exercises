@@ -1,0 +1,27 @@
+nav ul {
+    list-style: none;
+}
+.submitButton {
+    color: #e5e5e5;
+    background-color: #2F65F8;
+    border-radius: 3px;
+}
+#access {
+    background-color: #575988;
+}
+#access2 {
+    background-color: #575988;
+}
+#access3 {
+    background-color: #07043B;
+}
+#textColor {
+    color: #e5e5e5;
+}
+li {
+    color: #e5e5e5;
+}
+
+.container.hero {
+
+}

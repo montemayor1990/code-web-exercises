@@ -1,0 +1,53 @@
+@import "layout.css";
+
+
+.page-wrapper {
+    justify-content: space-between;
+}
+.nav-links {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    list-style: none;
+    right: 10px;
+    gap: 10px;
+}
+
+
+footer.row {
+    display: flex;
+    position: absolute;
+    bottom: 100px;
+}
+
+.hero {
+    padding: 50px;
+}
+
+@media screen and (max-width:500px) {
+    .head {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: unset;
+    }
+    .nav-links {
+        position: unset;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .sub-section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .columnCollapse {
+        flex-direction: column;
+    }
+}

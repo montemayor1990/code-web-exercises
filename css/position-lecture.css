@@ -1,0 +1,13 @@
+@import "position-lecture-base.css";
+
+/* This is the file we will use to experiment with position */
+.container {
+  position: relative;
+}
+
+#item-1 {
+  position: relative;
+}
+
+
+/* is it static? did it appear last? what has the higher of z index. Everything with a value of other than static will place on the z index then give it a value to place it on top of each other. when you make something absolute, you gotta ask what am I looking to make myself absolute, it looks for the parent otherwise it looks for the body. default position property is static. position sticky not in curriculum, will stick to viewport but stays with element, will not leave parent element */
