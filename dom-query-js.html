@@ -51,6 +51,9 @@
         // TODO: Set text color of li with dbid = 1 to blue
         const dbid1 = document.querySelector('li[data-dbid="1"]')
         dbid1.style.color = "blue";
+        //*** Alternate way of doing it****
+        // document.querySelector('li[data-dbid="1"]').style.color = "blue";
+        //****    *****
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         const subParagraphs = document.querySelectorAll(".sub-paragraph");
@@ -60,6 +63,9 @@
         for (let para of subParagraphs){
             para.innerHTML = "Mission Accomplished!"
         }
+        //*** Alternate way of doing it****
+        //subParagraphs[0].innerText = "Mission Accomplished!"
+        //****    *****
 
 </script>
 </body>
