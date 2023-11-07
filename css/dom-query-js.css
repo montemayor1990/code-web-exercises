@@ -1,0 +1,23 @@
+/*use strict";*/
+
+
+/*// TODO: Set inner html of mainHeader to "JavaScript is Cool"*/
+
+
+
+/*// TODO: Set the text color of subHeader to blue*/
+
+
+
+/*// TODO: Set text color on every other list item to grey*/
+
+
+const listItems = document.querySelectorAll("ul li"); // Select all list items
+
+
+
+
+/*// TODO: Set text color of li with dbid = 1 to blue*/
+
+
+/*// TODO: Change the text in the first sub paragraph to "Mission Accomplished!"*/

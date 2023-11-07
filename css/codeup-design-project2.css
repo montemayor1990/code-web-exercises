@@ -1,0 +1,22 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css") layer(framework);
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Anton&display=swap');
+
+/* Colors -------------------------------*/
+:root {
+    --light-red: #E6563B;
+    --orange: #EB9D3A;
+    --light-green: #7CB06C;
+    --light-blue: #00ABA9;
+    --light-grey: #F0F0F0;
+    --grey: #E6E6E6;
+}
+body{
+    background-color: var(--light-grey);
+    font-family: "Abel", sans-serif;
+}
+
+.cont1 {
+    gap: 50px;
+}
+
+/* I need to write approximately 6 media queries, 1 for each screen size*/
