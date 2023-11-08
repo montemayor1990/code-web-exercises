@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>DOM: Query and Modify</title>
+
 </head>
 <body>
 
@@ -28,30 +29,33 @@
     <button id="button2">Button 2</button>
     <button id="button3">Button 3</button>
     <button id="button4">Button 4</button>
-
+    <p id="para" class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at consectetur cum error excepturi facilis incidunt omnis qui vitae voluptatibus? Beatae cum dignissimos doloremque et iste nostrum odio quam tenetur.</p>
+    <p id="para2" class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at consectetur cum error excepturi facilis incidunt omnis qui vitae voluptatibus? Beatae cum dignissimos doloremque et iste nostrum odio quam tenetur.</p>
+    <p id="para3" class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at consectetur cum error excepturi facilis incidunt omnis qui vitae voluptatibus? Beatae cum dignissimos doloremque et iste nostrum odio quam tenetur.</p>
+    <p id="para4" class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at consectetur cum error excepturi facilis incidunt omnis qui vitae voluptatibus? Beatae cum dignissimos doloremque et iste nostrum odio quam tenetur.</p>
 <script>
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
          const mainHeader = document.querySelector("#mainHeader");
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "JavaScript is Cool";
+        // mainHeader.innerHTML = "JavaScript is Cool";
 
         // TODO: Uncomment the next line and get the sub header element by id
          const subHeader = document.querySelector("#sub-header");
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = "blue";
+        // subHeader.style.color = "blue";
 
         // TODO: Uncomment the next line and get all list items
          const listItems = document.querySelectorAll("li"); ;
 
         // TODO: Set text color on every other list item to grey
-        listItems.forEach((item, index) => {
-            if (index % 2 === 1) {
-                item.style.color = "grey";
-            }
-        });
+        // listItems.forEach((item, index) => {
+        //     if (index % 2 === 1) {
+        //         item.style.color = "grey";
+        //     }
+        // });
 
         // TODO: Set text color of li with dbid = 1 to blue
         const dbid1 = document.querySelector('li[data-dbid="1"]')
@@ -78,18 +82,31 @@
         const button3 = document.getElementById('button3');
         const button4 = document.getElementById('button4');
         const mainHeader2 = document.getElementById('mainHeader')
+        const paragraphs = document.querySelectorAll('p')
         //
         button1.addEventListener('click', e=>{
-            mainHeader2.innerHTML = 'Javascript is Cool'
+            mainHeader.style.color = 'red';
         })
         button2.addEventListener('click', e=>{
-            mainHeader2.innerHTML = 'Javascript is Not Cool'
+            subHeader.style.color = "blue";
         })
         button3.addEventListener('click', e=>{
-            mainHeader2.innerHTML = 'Javascript is Cool jk'
+            for (const paragraph of paragraphs) {
+                paragraph.style.fontSize = '18px';
+            }
         })
         button4.addEventListener('click', e=>{
-            mainHeader2.innerHTML = 'jk Javascript is Cool not'
+            for (const item of items) {
+                item.addEventListener('mouseover', function() {
+                    // Change the text color to red when hovering
+                    item.style.color = 'red';
+                });
+
+                item.addEventListener('mouseout', function() {
+                    // Reset the text color to black when not hovering
+                    item.style.color = 'black';
+                });
+            }
         })
 
 </script>
