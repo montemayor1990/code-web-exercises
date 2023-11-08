@@ -21,6 +21,16 @@
 #profile-desc {
     font-size: 16px;
     margin-top: 10px;
+
+
+}
+
+.whatever{
+    background-color: red;
+}
+
+.anything {
+    font-style: italic;
 }
 
 #toggle-btn {
@@ -37,3 +47,4 @@
 #toggle-btn:hover {
     background-color: #0056b3;
 }
+

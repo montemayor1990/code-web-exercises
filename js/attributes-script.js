@@ -6,13 +6,16 @@
 //     Write code that toggles a class on the "profile-card" that changes its background color every two seconds. Use setInterval.
 
 (()  => {
+
+
+
     window.addEventListener('load', function() {
         // Use a setTimeout to change the image source after 2 seconds
         setTimeout(function() {
             const profilePic = document.getElementById('profile-pic');
             if (profilePic) {
                 // Change the src attribute to a different image URL
-                profilePic.src = 'https://example.com/your-new-image.jpg';
+                profilePic.src = 'img/images/apple-ipad.jpg';
             }
         }, 2000); // 2000 milliseconds (2 seconds)
     });
@@ -26,16 +29,25 @@
             }
         }, 4000); // 4000 milliseconds (4 seconds)
     });
-    // Function to toggle the class and change the background color
-    function toggleBackgroundColor() {
-        const profileCard = document.getElementById('profile-card');
 
-        // Check if the element exists
-        if (profileCard) {
-            profileCard.classList.toggle('background-toggle');
-        }
-    }
+    const profileDesc = document.getElementById('profile-desc');
+    setTimeout(function() {
+
+                profileDesc.classList.add("anything");
+                profileDesc.classList.add("whatever");
+
+        }, 6000);
+
+    // Write code that toggles a class on the "profile-card" that changes its background color every two seconds. Use setInterval.
+
+
+    const toggleBtn = document.querySelector("#toggle-btn");
+    toggleBackgroundColor.addEventListener("click", () =>{
+
+    })
 
     // Use setInterval to toggle the class every two seconds
-    setInterval(toggleBackgroundColor, 2000); // 2000 milliseconds (2 seconds)
+    setInterval(() => {
+        toggleBtn.classList.toggle("background-color")
+    }, 2000);
 })();
