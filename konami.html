@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<script>
+    "use strict";
+
+    const pressed = []
+    const secretcode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a']
+    window.addEventListener("keyup", (e) =>{
+        console.log(e.key);
+        pressed.push(e.key);
+        pressed.splice(-secretcode.length -1, pressed.length - secretcode.length);
+        if(pressed.join(",").includes(secretcode)){
+            console.log("access granted!")
+        }
+        console.log(pressed);
+    })
+
+</script>
+</body>
+</html>
