@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parks</title>
+
+</head>
+<body>
+
+<h1>National Parks FAQ</h1>
+
+<dl>
+    <dt>How many people visit the national parks?</dt>
+    <dd>Total recreation visitors to the national parks in 2018: 318,211,833.</dd>
+
+    <dt>How old is the National Park System?</dt>
+    <dd>The National Park Service was created by an act signed by President Woodrow Wilson on August 25, 1916.</dd>
+
+    <dt>How many employees are in the National Park Service?</dt>
+    <dd>Permanent, temporary, and seasonal employees: More than 20,000</dd>
+
+    <dt>What is the origin of the National Park Service arrowhead?</dt>
+    <dd>The arrowhead was authorized as the official National Park Service emblem by the Secretary of the Interior on July 20, 1951.</dd>
+
+    <dt>How many areas are in the National Park System?</dt>
+    <dd>The system includes 419 areas covering more than 85 million acres in every state, the District of Columbia, American Samoa, Guam, Puerto Rico, and the Virgin Islands.</dd>
+
+    <dt>What is the largest national park site?</dt>
+    <dd>Wrangell-St. Elias National Park and Preserve, AK, at 13.2 million acres.</dd>
+
+    <dt>What is the National Park Service budget?</dt>
+    <dd>Fiscal Year (FY) 2014 Enacted: $2.98 billion.</dd>
+
+    <dt>Can I bring my pet to a national park?</dt>
+    <dd>Some national parks welcome pets—in developed areas, on many trails and campgrounds, and in some lodging facilities.</dd>
+
+    <dt>How do I apply for a job with the National Park Service?</dt>
+    <dd>National Park Service jobs, including both permanent and seasonal positions, are listed on USAJOBs.</dd>
+
+    <dt>What do I need to know about driving off road in national parks?</dt>
+    <dd>Before you head out, check with the national parks that you intend to visit. In many national parks, off-road driving is illegal. Where off-road driving is allowed, the National Park Service regulates it.</dd>
+</dl>
+<h1>National Parks List</h1>
+<div id="arches-parks-div">
+    <h3 id="arches-parks-heading">Arches Park</h3>
+    <ul id="arches-parks">
+        <li>clean</li>
+        <li>big</li>
+        <li>public</li>
+        <li>pets allowed</li>
+    </ul>
+</div>
+<div id="badlands-parks-div">
+    <h3 id="badlands-parks-heading">Badlands Park</h3>
+    <ul id="badlands-parks-texas">
+        <li>dirty</li>
+        <li>small</li>
+        <li>private</li>
+        <li>pets not allowed</li>
+    </ul>
+</div>
+<div id="carlsbadCaverns-parks-div">
+    <h3 id="carlsbadCaverns-parks-heading">Carlsbad Caverns</h3>
+    <ul id="carlsbadCaverns-parks-texas">
+        <li>semi clean</li>
+        <li>medium</li>
+        <li>private</li>
+        <li>hunting only</li>
+    </ul>
+</div>
+<button id="changeBackgroundButton">Change Background</button>
+<script>
+    // Get a reference to the button
+    const changeBackgroundButton = document.getElementById('changeBackgroundButton');
+
+    // Add a click event listener to the button
+    changeBackgroundButton.addEventListener('click', function() {
+        // Get all the <ul> elements in the document
+        const ulElements = document.querySelectorAll('ul');
+
+        // Iterate through each <ul>
+        ulElements.forEach((ul) => {
+            // Get the last <li> element in each <ul>
+            const lastLi = ul.lastElementChild;
+
+            // Change the background color of the last <li> to yellow
+            lastLi.style.backgroundColor = 'yellow';
+        });
+    });
+    // Get all the <h3> elements in the document
+    const h3Elements = document.querySelectorAll('h3');
+
+    // Add a click event listener to each <h3>
+    h3Elements.forEach((h3) => {
+        h3.addEventListener('click', function() {
+            // Get the <ul> element that follows the clicked <h3>
+            const ul = h3.nextElementSibling;
+
+            if (ul) {
+                // Get all the <li> elements inside the <ul>
+                const liElements = ul.querySelectorAll('li');
+
+                // Change the fontWeight of the <li> elements to "bold"
+                liElements.forEach((li) => {
+                    li.style.fontWeight = 'bold';
+                });
+            }
+        });
+    });
+    // Get all the <li> elements in the document
+    const liElements = document.querySelectorAll('li');
+
+    // Add a click event listener to each <li>
+    liElements.forEach((li) => {
+        li.addEventListener('click', function() {
+            // Get the parent <ul> element of the clicked <li>
+            const ul = li.parentElement;
+
+            // Check if the parent element is a <ul>
+            if (ul && ul.tagName === 'UL') {
+                // Get the first <li> element in the <ul>
+                const firstLi = ul.querySelector('li');
+
+                // Change the font color of the first <li> to blue
+                if (firstLi) {
+                    firstLi.style.color = 'blue';
+                }
+            }
+        });
+    });
+
+</script>
+</body>
+</html>
