@@ -37,7 +37,7 @@
     <dt>How do I apply for a job with the National Park Service?</dt>
     <dd>National Park Service jobs, including both permanent and seasonal positions, are listed on USAJOBs.</dd>
 
-    <dt>What do I need to know about driving off road in national parks?</dt>
+    <dt>What do I need to know about driving off-road in national parks?</dt>
     <dd>Before you head out, check with the national parks that you intend to visit. In many national parks, off-road driving is illegal. Where off-road driving is allowed, the National Park Service regulates it.</dd>
 </dl>
 <h1>National Parks List</h1>
@@ -69,6 +69,18 @@
     </ul>
 </div>
 <button id="changeBackgroundButton">Change Background</button>
+<div class="frame" id="left-frame">
+    <img src="img/images/apple-ipad.jpg" alt="Left Picture">
+    <button class="left-button">Swap</button>
+</div>
+<div class="frame" id="center-frame">
+    <img src="img/images/macbook.jpg" alt="Center Picture">
+    <button class="center-button">Swap</button>
+</div>
+<div class="frame" id="right-frame">
+    <img src="img/images/ipad.jpg" alt="Right Picture">
+    <button class="right-button">Swap</button>
+</div>
 <script>
     // Get a reference to the button
     const changeBackgroundButton = document.getElementById('changeBackgroundButton');
@@ -128,7 +140,49 @@
             }
         });
     });
+    const leftFrame = document.getElementById('left-frame');
+    const centerFrame = document.getElementById('center-frame');
+    const rightFrame = document.getElementById('right-frame');
+    const leftButton = document.getElementById('left-button');
+    const centerButton = document.getElementById('center-button');
+    const rightButton = document.getElementById('right-button');
 
+    let leftImg = leftFrame.querySelector('img').src;
+    let centerImg = centerFrame.querySelector('img').src;
+    let rightImg = rightFrame.querySelector('img').src;
+
+    // function swapImages(source1, source2) {
+    //     const temp = source1;
+    //     source1 = source2;
+    //     source2 = temp;
+    // }
+    // Left button click event listener
+    leftButton.addEventListener('click', function() {
+        const temp = leftFrame.querySelector('img').src;
+        leftFrame.querySelector('img').src = centerFrame.querySelector('img').src;
+        centerFrame.querySelector('img').src = temp;
+    });
+
+    // Center button click event listener
+    centerButton.addEventListener('click', function() {
+        const randomSwap = Math.random() < 0.5;
+        if (randomSwap) {
+            const temp = centerFrame.querySelector('img').src;
+            centerFrame.querySelector('img').src = leftFrame.querySelector('img').src;
+            leftFrame.querySelector('img').src = temp;
+        } else {
+            const temp = centerFrame.querySelector('img').src;
+            centerFrame.querySelector('img').src = rightFrame.querySelector('img').src;
+            rightFrame.querySelector('img').src = temp;
+        }
+    });
+
+    // Right button click event listener
+    rightButton.addEventListener('click', function() {
+        const temp = rightFrame.querySelector('img').src;
+        rightFrame.querySelector('img').src = centerFrame.querySelector('img').src;
+        centerFrame.querySelector('img').src = temp;
+    });
 </script>
 </body>
 </html>
