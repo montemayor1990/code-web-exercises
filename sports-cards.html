@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sports Cards</title>
+    <link rel="stylesheet" href="./css/sportsCards.css">
+    <link rel="stylesheet" href="./css/coffeebootstrap.min.css">
+</head>
+<body>
+<div class="page-wrapper">
+    <header class="navbar fc">
+        <div class="container-fluid" style="background-image: url(img/sportsCards1.jpeg); width: 100%; height: 100%; background-repeat: no-repeat; background-size: cover;">
+
+            <a>Sports Cards</a>
+
+            <form class="d-flex" role="search">
+                <input id="search" class="form-control me-2" type="search" placeholder="Search for player" aria-label="Search">
+            </form>
+
+            <label for="player-selection">
+                <select class="form-select-lg m-2" id="player-selection">
+                    <option value="">All</option>
+                    <option value="nfl">NFL</option>
+                    <option value="nba">NBA</option>
+                    <option value="mlb">MLB</option>
+                </select>
+            </label>
+
+        </div>
+    </header>
+    <section class="container text-center m-5">
+        <div class="row align-items-center">
+            <div class="col">
+                <button class="btn" id="addBox" style="width: 100%; background-color: #000; color: #fff; font-family: Dancing Script, cursive; font-size: 22px" href="#bottom">Add new sports card</button>
+                <label for="player-selection">
+                    <select id="cardSelect" class="fixed" style="font-weight: bold">
+                        <option selected>Choose a card to add</option>
+                        <option value="nfl">NFL</option>
+                        <option value="nba">NBA</option>
+                        <option value="mlb">MLB</option>
+                    </select>
+                </label>
+                <label class="my-2" for="inputForm">
+                    <input type="text" class="fixed" id="inputForm" placeholder="Name your athlete" style="font-family: Dancing Script, cursive; font-weight: bold">
+                </label>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid">
+<!--        cards start right here***********************-->
+        <div class="row start-cards"></div>
+    </section>
+    <footer class="container-fluid" id="bottom">
+        <div class="row">
+            <div class="col">
+                <p class="text-center">Dave's Sports Cards</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+</div>
+
+<script src="./js/sportsCards.js"></script>
+</body>
+</html>

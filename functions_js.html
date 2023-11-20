@@ -1,14 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Functions Exercise</title>
+    <title></title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
 </head>
 <body>
+<div class="page-wrapper">
+    <header class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand">Devine and Montemayor Coffee</a>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search your coffee.." aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </header>
+    <section class="container">
+        <div class="row">
+            <div class="col">
+                <form>
+                    <label for="roast-selection"></label>
+                    <select id="roast-selection">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <input id="submit" type="submit" />
+                </form>
+            </div>
+        </div>
+    </section>
 
-    <script src="./js/functions2.js"></script>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>ROAST</th>
+        </tr>
+        </thead>
+        <tbody id="coffees"></tbody>
+    </table>
+</div>
+
+
+<script src="./js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,42 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Dancing+Script:wght@400;500;600;700&family=Lobster&display=swap');
+
+.coffee {
+    background-color: #000;
+    color: white;
+}
+
+div .custom:hover {
+    background-color: #795548;
+    border: 2px inset black;
+    opacity: .5;
+}
+.fc {
+    font-family: "Dancing Script", cursive;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: white;
+}
+
+p {
+    font-size: 2rem;
+    text-align: center;
+    padding: unset;
+    margin: unset;
+    font-family: Papyrus, fantasy;
+}
+h1 {
+    border: 4px solid black;
+}
+img {
+    height: 200px;
+    width: 75px;
+    padding: 10px;
+}
+label .fixed {
+    height: 38px;
+    width: 300px;
+    border: 2px solid black;
+}
+
+

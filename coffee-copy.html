@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coffee Copy</title>
+    <link rel="stylesheet" href="./css/styleC.css">
+    <link rel="stylesheet" href="./css/coffeebootstrap.min.css">
+</head>
+<body>
+
+    <div class="page-wrapper">
+
+            <header class="navbar fc">
+
+                <div class="container-fluid" style="background-image: url(img/cody-parade.jpeg); width: 100%; height: 100%; background-repeat: no-repeat; background-size: cover;">
+
+                <a> D & M Coffee</a>
+
+                    <form class="d-flex" role="search">
+                        <input id="search" class="form-control me-2" type="search" placeholder="Search your coffee.." aria-label="Search">
+                    </form>
+
+                    <label for="roast-selection">
+                        <select class="form-select-lg m-2" id="roast-selection">
+                            <option value="">All</option>
+                            <option value="light">Light</option>
+                            <option value="medium">medium</option>
+                            <option value="dark">dark</option>
+                        </select>
+                    </label>
+
+                </div>
+            </header>
+
+        <section class="container text-center m-5">
+
+            <div class="row align-items-center">
+
+                <div class="col">
+
+                    <button class="btn" id="addBox" style="width: 100%; background-color: #000; color: #fff; font-family: Dancing Script, cursive; font-size: 22px" href="#bottom">Add New Coffee</button>
+
+                    <label for="roast-selection">
+
+                        <select class="fixed text-center" id="roastSelect" style="font-weight: bold">
+
+                            <option selected>Choose a roast to add..</option>
+                            <option value="light">Light</option>
+                            <option value="medium">Medium</option>
+                            <option value="dark">Dark</option>
+                        </select>
+                    </label>
+
+                    <label class="my-2" for="inputForm">
+
+                        <input type="text" class="fixed" id="inputForm" placeholder="Name your coffee" style="font-family: Dancing Script, cursive; font-weight: bold">
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-fluid">
+
+            <div class="row start-cards">
+<!--                COFFEE CARDS START HERE    -->
+            </div>
+        </section>
+
+        <footer class="container-fluid" id="bottom">
+
+            <div class="row">
+
+                <div class="col">
+
+                    <p class="text-center">D & M Coffee</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+<script src="./js/coffeeMain.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    const users = [
+        {
+            id: 1,
+            name: 'ryan',
+            email: 'ryan@codeup.com',
+            languages: ['clojure', 'javascript'],
+            yearsOfExperience: 5
+        },
+        {
+            id: 2,
+            name: 'luis',
+            email: 'luis@codeup.com',
+            languages: ['java', 'scala', 'php'],
+            yearsOfExperience: 6
+        },
+        {
+            id: 3,
+            name: 'zach',
+            email: 'zach@codeup.com',
+            languages: ['javascript', 'bash'],
+            yearsOfExperience: 7
+        },
+        {
+            id: 4,
+            name: 'fernando',
+            email: 'fernando@codeup.com',
+            languages: ['java', 'php', 'sql'],
+            yearsOfExperience: 8
+        },
+        {
+            id: 5,
+            name: 'justin',
+            email: 'justin@codeup.com',
+            languages: ['html', 'css', 'javascript', 'php'],
+            yearsOfExperience: 9
+        }
+    ];
+
+
+
+
+
+
+    const returnUsersW3Langs = users.filter(user => user.languages.length >=3);
+    console.log(returnUsersW3Langs);
+
+
+    const userEmails = users.map(user => user.email);
+
+    console.log(userEmails);
+
+    const totalYearsOfExperience = users.reduce((total, user) => total + user.yearsOfExperience, 0);
+
+    // Calculate the average
+    const averageYearsOfExperience = totalYearsOfExperience / users.length;
+
+    console.log("Total Years of Experience:", totalYearsOfExperience);
+    console.log("Average Years of Experience:", averageYearsOfExperience);
+
+    const longestEmail = users.reduce((longest, user) => (user.email.length > longest.length ? user.email : longest), '');
+
+    console.log("Longest Email:", longestEmail);
+
+    // Use .reduce() to concatenate user names into a single string
+    const userNamesString = users.reduce((acc, user, index) => {
+        if (index === 0) {
+            // The first user name
+            return user.name;
+        } else if (index === users.length - 1) {
+            // The last user name
+            return acc + ', and ' + user.name;
+        } else {
+            // Intermediate user names
+            return acc + ', ' + user.name;
+        }
+    }, '');
+
+    console.log("Your instructors are: " + userNamesString + ".");
+
+
+
+</script>
+
+</body>
+</html>
