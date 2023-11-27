@@ -50,25 +50,51 @@
 
 
 
-    const returnUsersW3Langs = users.filter(user => user.languages.length >=3);
-    console.log(returnUsersW3Langs);
+    //const returnUsersW3Langs = users.filter(user => user.languages.length >=3);
+    //console.log(returnUsersW3Langs);
+
+    (()=>{
+        const users3Languages = users.filter((user, i, array)=>{
+            return user.languages.length >= 3;
+        });
+        console.log("users with 3 or more langs", users3Languages )
+
+    })();
+//***teacher ex^^^^
+
+    //const userEmails = users.map(user => user.email);
+
+    //console.log(userEmails);
+
+    const userEmails = users.map((user)=>{
+        return user.email;
+    });
+    console.log("user emails", userEmails);
+
+    //***teacher ex^^^
 
 
-    const userEmails = users.map(user => user.email);
+    // const totalYearsOfExperience = users.reduce((total, user) => total + user.yearsOfExperience, 0);
+    //
+    // // Calculate the average
+    // const averageYearsOfExperience = totalYearsOfExperience / users.length;
+    //
+    // console.log("Total Years of Experience:", totalYearsOfExperience);
+    // console.log("Average Years of Experience:", averageYearsOfExperience);
 
-    console.log(userEmails);
+    const totalYears = users.reduce((accumulator, user)=>{
+        return accumulator + user.yearsOfExperience;
+    }, 0);
+    const averageYears = totalYears / users.length
+    console.log("total equals ", averageYears);
 
-    const totalYearsOfExperience = users.reduce((total, user) => total + user.yearsOfExperience, 0);
+    //***teacher ex^^^^^^
 
-    // Calculate the average
-    const averageYearsOfExperience = totalYearsOfExperience / users.length;
+    // const longestEmail = users.reduce((longest, user) => (user.email.length > longest.length ? user.email : longest), '');
+    // could not copy instructor during walkthrough, reference walkthrough on git hub once pushed to update notes
 
-    console.log("Total Years of Experience:", totalYearsOfExperience);
-    console.log("Average Years of Experience:", averageYearsOfExperience);
 
-    const longestEmail = users.reduce((longest, user) => (user.email.length > longest.length ? user.email : longest), '');
 
-    console.log("Longest Email:", longestEmail);
 
     // Use .reduce() to concatenate user names into a single string
     const userNamesString = users.reduce((acc, user, index) => {
@@ -80,12 +106,24 @@
             return acc + ', and ' + user.name;
         } else {
             // Intermediate user names
-            return acc + ', ' + user.name;
+            return acc + ', ' + user.name; // `${accumulator}, ${user.name}` *** don't forget back ticks
         }
     }, '');
 
     console.log("Your instructors are: " + userNamesString + ".");
 
+    const languagesKnown = users.reduce((acc, user) =>{
+        for (let language of user.languages){
+            if (!acc.includes(language)){
+                acc.push(language);
+            }
+        }
+        return acc;
+    }, []);
+    //***new set, look up to get explanation on how to add to the above function
+    console.log(languagesKnown);
+
+    //***BONUS walkthrough with instructor^^^^^^^
 
 
 </script>

@@ -1,0 +1,22 @@
+.page-wrapper {
+    border: 2px solid black;
+}
+
+.container {
+    border: 2px solid black;
+}
+
+.row {
+    border: 2px solid black;
+}
+
+.col {
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar {
+    font-size: 50px;
+    font-family: cursive;
+}
